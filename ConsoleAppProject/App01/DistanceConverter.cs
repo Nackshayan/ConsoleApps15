@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App01
     /// the equivalent distance in another unit (toUnit).
     /// </summary>
     /// <author>
-    /// Kate Gordon version 0.6
+    /// Nackshayan 1.2
     /// </author>
     public class DistanceConverter
     {
@@ -184,7 +184,7 @@ namespace ConsoleAppProject.App01
             Console.WriteLine("\n ****************************** ");
             Console.WriteLine(" ******************************  ");
             Console.WriteLine("        Distance Converter        ");
-            Console.WriteLine("         by Kate Gordon          ");
+            Console.WriteLine("         by Nackshayan         ");
             Console.WriteLine(" ******************************   ");
             Console.WriteLine(" ****************************** \n");
         }

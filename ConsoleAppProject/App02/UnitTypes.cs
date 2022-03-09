@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Two unit types measuring weight and height
-    /// Kate Gordon version 1.0
+    /// Nackshayan 1.2
     /// </summary>
     public enum UnitTypes
     {

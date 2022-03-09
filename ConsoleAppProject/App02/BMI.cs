@@ -9,7 +9,7 @@ namespace ConsoleAppProject.App02
     /// risks that may apply.
     /// </summary>
     /// <author>
-    /// Kate Gordon version 0.1
+    /// Nackshayan 1.2
     /// </author>
     public class BmiCalculator
     {
@@ -258,7 +258,7 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("\n ****************************** ");
             Console.WriteLine(" ******************************  ");
             Console.WriteLine("       BMI Calculator        ");
-            Console.WriteLine("         by Kate Gordon          ");
+            Console.WriteLine("         by Nackshayan         ");
             Console.WriteLine(" ******************************   ");
             Console.WriteLine(" ****************************** \n");
         }
