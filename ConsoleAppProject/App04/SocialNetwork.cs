@@ -77,7 +77,7 @@ namespace ConsoleAppProject.App04
                         DisplayAuthorPosts(); 
                         break;
                     case 6: 
-                        //DisplayByDate(); 
+                        DisplayByDate(); 
                         break;
                     case 7: 
                         AddComment(); 
