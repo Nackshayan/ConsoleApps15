@@ -1,23 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ConsoleAppProject.App01.DistanceConverter">
-    <Position X="3.5" Y="0.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AgwAAAAgAgoAAAkUIASmAQIJAAAAJEAAAAQAWBAAAII=</HashCode>
-      <FileName>App01\DistanceConverter.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="DistanceUnits" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="ConsoleAppProject.Program">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="DistanceConverter" />
+      <Property Name="StudentGrades" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleAppProject.Helpers.ConsoleHelper">
@@ -27,11 +17,18 @@
       <FileName>Helpers\ConsoleHelper.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="ConsoleAppProject.App01.DistanceUnits">
+  <Class Name="ConsoleAppProject.App03.StudentGrades">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>oJ4AAACAAAAAAAAgAACQAAAAAAAAAEAGIEQCAIAgAAI=</HashCode>
+      <FileName>App03\StudentGrades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ConsoleAppProject.App03.Grades">
     <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAkAAQgAABQAAAAAAAA=</HashCode>
-      <FileName>App01\DistanceUnits.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAEAQAA=</HashCode>
+      <FileName>App03\Grades.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -1,78 +1,257 @@
-﻿using System;
+﻿using ConsoleAppProject.Helpers;
+using System;
 using System.Collections.Generic;
-
 
 namespace ConsoleAppProject.App04
 {
-    ///<summary>
-    /// The NewsFeed class stores news posts for the news feed in a social network 
-    /// application.
-    /// 
-    /// Display of the posts is currently simulated by printing the details to the
-    /// terminal. (Later, this should display in a browser.)
-    /// 
-    /// This version does not save the data to disk, and it does not provide any
-    /// search or ordering functions.
-    ///</summary>
-    ///<author>
-    ///  Michael Kölling and David J. Barnes
-    ///  version 0.1
-    ///</author> 
+    /// <summary>
+    /// The NewsFeed class stores news posts for the news feed 
+    /// in a social network application
+    /// </summary>
+    /// <author>
+    ///  Nackshayan v2.5
+    /// </author> 
     public class NewsFeed
     {
-        private readonly List<MessagePost> messages;
-        private readonly List<PhotoPost> photos;
+        private readonly List<Post> posts;
 
         ///<summary>
-        /// Construct an empty news feed.
+        /// Construct a news feed containing sample posts
         ///</summary>
         public NewsFeed()
         {
-            messages = new List<MessagePost>();
-            photos = new List<PhotoPost>();
+            posts = new List<Post>();
+
+            MessagePost messagePost = new MessagePost(" Sam",
+                " Hello World");
+            AddMessagePost(messagePost);
+
+            PhotoPost photoPost = new PhotoPost(" Sam",
+                "Image1.jpg", "Hello World");
+            AddPhotoPost(photoPost);
         }
 
-
         ///<summary>
-        /// Add a text post to the news feed.
-        /// 
-        /// @param text  The text post to be added.
+        /// Add a text post to the news feed
         ///</summary>
         public void AddMessagePost(MessagePost message)
         {
-            messages.Add(message);
+            posts.Add(message);
         }
 
         ///<summary>
-        /// Add a photo post to the news feed.
-        /// 
-        /// @param photo  The photo post to be added.
+        /// Add a photo post to the news feed
         ///</summary>
         public void AddPhotoPost(PhotoPost photo)
         {
-            photos.Add(photo);
+            posts.Add(photo);
+        }
+
+        /// <summary>
+        /// Find a post according to the ID assigned to each 
+        /// post
+        /// </summary>
+        public Post FindPostByID(int id)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.postID == id)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Find a post according to the ID assigned to each 
+        /// post
+        /// </summary>
+        public Post FindPostByAuthor(string author)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.Author == author)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Find a post according to the ID assigned to each 
+        /// post
+        /// </summary>
+        public Post FindPostByDate(DateTime date)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.Timestamp == date)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Find a post using a given ID and remove the selected post
+        /// from the News Feed
+        /// </summary>
+        public void RemovePost(int id)
+        {
+            ConsoleHelper.OutputTitle(" Removing a Post");
+            Post post = FindPostByID(id);
+
+            if (post == null)
+            {
+                Console.WriteLine();
+                Console.WriteLine($" Post with ID {id} does not exist");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine($" The Post with ID {id} has been removed");
+
+                posts.Remove(post);
+                post.Display();
+            }
         }
 
         ///<summary>
-        /// Show the news feed. Currently: print the news feed details to the
-        /// terminal. (To do: replace this later with display in web browser.)
+        /// Shows the news feed details to the terminal
         ///</summary>
         public void Display()
         {
-            // display all text posts
-            foreach (MessagePost message in messages)
-            {
-                message.Display();
-                Console.WriteLine();   // empty line between posts
-            }
+            ConsoleHelper.OutputTitle(" Displaying All Posts");
+            Console.WriteLine();
 
-            // display all photos
-            foreach (PhotoPost photo in photos)
+            foreach (Post post in posts)
             {
-                photo.Display();
-                Console.WriteLine();   // empty line between posts
+                post.Display();
+                Console.WriteLine();
+            }
+        }
+
+        ///<summary>
+        /// Shows the news feed details to the terminal
+        ///</summary>
+        public void DisplayByAuthor(string author)
+        {
+            ConsoleHelper.OutputTitle(" Displaying Posts by Author");
+
+            foreach (Post post in posts)
+            {
+                if (author == null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($" There are no Posts by {author}");
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($" All Posts by {author}");
+
+                    post.Display();
+
+                    Console.WriteLine();
+                }
+            }
+        }
+
+        public void DisplayByDate(DateTime date)
+        {
+            ConsoleHelper.OutputTitle(" Displaying Posts by Author");
+
+            foreach (Post post in posts)
+            {
+                if (date == null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($" There are no Posts on {date}");
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($" All Posts on {date}");
+
+                    post.Display();
+
+                    Console.WriteLine();
+                }
+            }
+        }
+
+        public void Comment(int id)
+        {
+            ConsoleHelper.OutputTitle(" Commenting on a Post");
+            Post post = FindPostByID(id);
+
+            if (post == null)
+            {
+                Console.WriteLine();
+                Console.WriteLine($" Post with ID {id} does not exist");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.Write($" Please enter your Comment > ");
+                string text = Console.ReadLine();
+
+                post.AddComment(text);
+
+                Console.WriteLine();
+
+                post.Display();
+            }
+        }
+
+        public void LikePost(int id)
+        {
+            Post post = FindPostByID(id);
+
+            if (post == null)
+            {
+                Console.WriteLine();
+                Console.WriteLine($" Post with ID {id} does not exist");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine($" You have Liked post with ID {id}");
+
+                post.Like();
+
+                Console.WriteLine();
+
+                post.Display();
+            }
+        }
+
+        public void UnlikePost(int id)
+        {
+            Post post = FindPostByID(id);
+
+            if (post == null)
+            {
+                Console.WriteLine();
+                Console.WriteLine($" Post with ID {id} does not exist");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine($" You have Unliked post with ID {id}");
+
+                post.Unlike();
+
+                Console.WriteLine();
+
+                post.Display();
             }
         }
     }
-
 }

@@ -13,6 +13,9 @@ namespace ConsoleAppProject.Helpers
     /// <author>
     /// Derek Peacock 2021
     /// </author>
+    /// <modified>
+    /// Samuel Baker 26/02/2022
+    /// </modified>
     /// </summary>
     public static class ConsoleHelper
     {
@@ -74,7 +77,7 @@ namespace ConsoleAppProject.Helpers
                 catch (Exception)
                 {
                     isValid = false;
-                    Console.WriteLine(" INVALID NUMBER!");
+                    Console.WriteLine(" Number is Invalid - Try Again");
                 }
 
             } while (!isValid);
@@ -103,7 +106,7 @@ namespace ConsoleAppProject.Helpers
                 if (number < min || number > max)
                 {
                     isValid = false;
-                    Console.WriteLine($"Number must be between {min} and {max}");
+                    Console.WriteLine($" Number must be between {min} and {max}");
                 }
                 else isValid = true;
 
@@ -124,10 +127,10 @@ namespace ConsoleAppProject.Helpers
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine("\n ---------------------------------");
-            Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine($"    {heading}                      ");
+            Console.WriteLine("         by Samuel Baker            ");
             Console.WriteLine(" ---------------------------------" +
-                "\n");
+                              "\n");
 
             Console.ForegroundColor = ConsoleColor.Yellow;
         }

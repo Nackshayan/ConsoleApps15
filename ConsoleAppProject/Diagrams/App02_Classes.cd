@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleAppProject.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.Helpers.ConsoleHelper">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAAAAAACAAgAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Helpers\ConsoleHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App02.BMICalculator">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ARHCABAEACgBAQAoAKgAICAQBBAAIEAAGKAAACAACAI=</HashCode>
+      <FileName>App02\BMICalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ConsoleAppProject.App02.UnitChoices">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAACABAAAAAAAAA=</HashCode>
+      <FileName>App02\UnitChoices.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ConsoleAppProject.App02.UnitsList">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAgAAAAAAAAAIAAAQgAFBQAAAAAAAA=</HashCode>
+      <FileName>App02\UnitsList.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

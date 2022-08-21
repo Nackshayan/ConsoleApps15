@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleAppProject.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.Helpers.ConsoleHelper">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAAAAAACAAgAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Helpers\ConsoleHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App04.NewsFeed">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEAAAEAAAAAAABAYCAAAAAAQAAAAEABgAAAAA=</HashCode>
+      <FileName>App04\NewsFeed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App06.Game">
+    <Position X="3" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAADAAACAAAAAAAACAAAAAAAhAABAACAAAgAYAAAA=</HashCode>
+      <FileName>App06\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleAppProject.App06.GameView">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAQBAAAEEAAAABAAAAAAAgAAAIhAAIACAAAQgQAAA=</HashCode>
+      <FileName>App06\GameView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+      <Property Name="GamePlayers" />
+      <Property Name="GameChoices" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleAppProject.App06.Player">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAEQAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App06\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App06.GameImages">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAggAAAAAAIAAgAAAAAAAAAAAAIBAAAAAAA=</HashCode>
+      <FileName>App06\GameImages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ConsoleAppProject.App06.GameChoices">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
+      <FileName>App06\GameChoices.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ConsoleAppProject.App06.GamePlayers">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQEAAAA=</HashCode>
+      <FileName>App06\GamePlayers.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

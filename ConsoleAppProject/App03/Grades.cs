@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-
+using System.ComponentModel.DataAnnotations;
 namespace ConsoleAppProject.App03
 {
     /// <summary>
@@ -11,17 +11,22 @@ namespace ConsoleAppProject.App03
     /// </summary>
     public enum Grades
     {
-        [Description("Not Available")]
-        N,
-        [Description("Fail")]
-        F, 
-        [Description("Third Class")]
-        D, 
-        [Description("Lower Second")]
-        C, 
-        [Description("Upper Second")]
-        B, 
-        [Description("First Class")]
-        A
+        [Display(Name = "Invalid")]
+        X = -1,
+        [Display(Name = "Fail")]
+        [Description("Referred")]
+        F = 0,
+        [Display(Name = "III")]
+        [Description("BSc(Hons) Third Class")]
+        D = 40,
+        [Display(Name = "II-2")]
+        [Description("BSc(Hons) Lower Second")]
+        C = 50,
+        [Display(Name = "II-1")]
+        [Description("BSc(Hons) Upper Second")]
+        B = 60,
+        [Display(Name = "1st")]
+        [Description("BSc(Hons) First Class")]
+        A = 70
     }
 }

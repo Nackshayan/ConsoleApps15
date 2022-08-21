@@ -1,53 +1,76 @@
-﻿using System;
-using ConsoleAppProject.App01;
+﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
+using ConsoleAppProject.App06;
+using ConsoleAppProject.Helpers;
+using System;
 
 namespace ConsoleAppProject
 {
     /// <summary>
     /// The main method in this class is called first
     /// when the application is started.  It will be used
-    /// to start Apps 01 to 05 for CO453 
+    /// to start App01 to App06 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Nackshayan 17/03/2022
+    /// Nackshayan Console V2.0
     /// </summary>
-    public static class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            ConsoleHelper.OutputHeading("CO453 C# Console Applications 2021");
+            Console.WriteLine();
+            Console.WriteLine(" ================================================= ");
+            Console.WriteLine("    BNU CO453 Applications Programming 2022 By Nackshayan ");                
+            Console.WriteLine(" ================================================= ");
+            Console.WriteLine();
 
-            string[] choices = { "App01: Distance Converter",
-                                 "App02: BMI Calculator",
-                                 "App03: Student Marks",
-                                 "Exit"};
+            string[] choices =
+            {
+                " Distance Converter",
+                " BMI Calculator",
+                " Student Grades",
+                " Social Network",
+                " RPS Game",
+                " Quit"
+            };
+        
+            Console.WriteLine(" Please Choose which Application You would like to Use");
+            Console.WriteLine();
 
             int choice = ConsoleHelper.SelectChoice(choices);
 
             switch (choice)
             {
                 case 1:
-                    DistanceConverter converter = new DistanceConverter();
-                    converter.ConvertDistance();
+                    DistanceConverter app01 = new DistanceConverter();
+                    app01.Run();
                     break;
                 case 2:
-                    BMICalculator bmi_calculator = new BMICalculator();
-                    bmi_calculator.OutputBMI();
+                    BMICalculator app02 = new BMICalculator();
+                    app02.Run();
                     break;
                 case 3:
-                    StudentGrades studentGrades = new StudentGrades();
-                    studentGrades.OutputHeading();
+                    StudentGrades app03 = new StudentGrades();
+                    app03.Run();
                     break;
                 case 4:
-                    Environment.Exit(0);
+                    SocialNetwork app04 = new SocialNetwork();
+                    app04.Run();
                     break;
+                case 5:
+                    GameView app06 = new GameView();
+                    app06.PlayGame();
+                    break;
+
                 default:
                     break;
+                
             }
+            while (choice != 6);
         }
     }
 }

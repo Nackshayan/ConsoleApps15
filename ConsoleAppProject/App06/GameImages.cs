@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App06
     /// for Rock-Paper-Scissors game
     /// </summary>
     /// <author>
-    /// Unkown ??
+    /// Nackshayan 14/08/2022
     /// </author>
     public static class GameImages
     {
