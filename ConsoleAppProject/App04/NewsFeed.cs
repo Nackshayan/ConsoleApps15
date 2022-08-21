@@ -22,12 +22,12 @@ namespace ConsoleAppProject.App04
         {
             posts = new List<Post>();
 
-            MessagePost messagePost = new MessagePost(" Sam",
-                " Hello World");
+            MessagePost messagePost = new MessagePost(" Nackshayan",
+                " Welcome to avengers");
             AddMessagePost(messagePost);
 
-            PhotoPost photoPost = new PhotoPost(" Sam",
-                "Image1.jpg", "Hello World");
+            PhotoPost photoPost = new PhotoPost(" Nackshayan",
+                "Aven1.jpg", "Welcome to avengers");
             AddPhotoPost(photoPost);
         }
 
